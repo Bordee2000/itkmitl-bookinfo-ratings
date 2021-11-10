@@ -12,7 +12,7 @@ jobs:
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v1
         with:
-          registry: ghcr.io/bordee2000/bookinfo-ratings:dev
+          registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and push
@@ -20,7 +20,3 @@ jobs:
         with:
           push: true
           tags: ghcr.io/bordee2000/bookinfo-ratings:dev
-
-      # - run: docker build -t ghcr.io/bordee2000/bookinfo-ratings:dev .
-      # - run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-      # - run: docker push ghcr.io/bordee2000/bookinfo-ratings:dev
