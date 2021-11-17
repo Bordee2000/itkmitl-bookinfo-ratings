@@ -47,4 +47,4 @@ jobs:
       - name: Check the deployed service URL
         uses: jtalk/url-health-check-action@v2
         with:
-          url: http://itkmitl.bookinfo.dev.opsta.net/student27/ratings/health | grep "Ratings is working"
+          url: http://itkmitl.bookinfo.dev.opsta.net/student27/ratings/health
