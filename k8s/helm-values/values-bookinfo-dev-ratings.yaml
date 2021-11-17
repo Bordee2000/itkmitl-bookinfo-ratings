@@ -19,3 +19,9 @@ extraEnv:
 extraEnvSecret:
   MONGO_DB_PASSWORD:
     bookinfo-dev-ratings-mongodb-secret: mongodb-password
+values: |
+            {
+              "extraEnv": {
+                "COMMIT_SHA": "${{ github.sha }}"
+              }
+            }
